@@ -204,6 +204,20 @@ function Str1(str2){
     {
       return decode;
     }
+      //New decode for datalog
+  decode = [];
+  {
+    for(var i=0;i<bytes.length;i=i+11)
+    {
+      var da= datalog(i,bytes);
+      if(i=='0')
+        decode.DATALOG=da;
+      else
+        decode.DATALOG+=da;
+    }
+  }
+  return decode;
+    
   break;
   
   case 1:
